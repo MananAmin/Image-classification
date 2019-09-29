@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>{{ the_title }}</h1>
+
+
+<img alt="uploaded image " src="{{ url_for('static', filename='images/') }}/{{image}}" >
+
+
+<h2>Predicted class is {{predict}}</h2>
+<form action="{{ url_for('tran') }}" method="POST" enctype=multipart/form-data >
+  <input type=text value={{image}} name=fname readonly>
+  <input value="for transfer learning results" type=submit>
+</form>
+
+
+<p class="credit"><a href="https://github.com/MananAmin" target="_blank">Github</a></p>
+
+
+
+
+
+{% endblock %}
