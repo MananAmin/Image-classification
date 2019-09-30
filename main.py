@@ -64,12 +64,13 @@ def clas():
     print(path)
     print(img)
     # image_1 = image_resize(img)
-    image = image_1/255.0
-    data = image.reshape(1,32,32,3)
-
+    
+    data = image_1.reshape(1,32,32,3)
+    datan = data/255.0
     model = load_model('models/c10_cnn_man.h5')
-    pred_c = model.predict_classes(data)
-    pred = dic[pred_c[0]]
+    pred_c = model.predict_classes(datan)
+    print(pred_c[0]+1)
+    pred = dic[pred_c[0]+1]
     print(pred)
     K.clear_session()
     return render_template('clas.html', the_title='Cifar-10 Classification',image=fpath,predict =pred )
