@@ -11,5 +11,5 @@ Cifar10 VGG16 transfer learning ACC ~ 0.8<br>
 # use
 
 clone repo.<br>
-download weights from here. put it in folder 'models' (create it in main folder)<br>
+download weights from <a href = 'https://drive.google.com/open?id=1eMjRwzuAZpKhF2qetmBWMwLHZ78Te7pa'> here</a>. put it in folder 'models' (create it in main folder)<br>
 run main.py
